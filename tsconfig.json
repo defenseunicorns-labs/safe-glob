@@ -25,6 +25,7 @@
 		"experimentalDecorators": true,
 		"downlevelIteration": true,
 		"declaration": true,
+		"skipLibCheck": true,
 
 		"pretty": true
 	},
