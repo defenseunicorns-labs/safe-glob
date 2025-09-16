@@ -69,9 +69,9 @@ export const {
 	productStreamTask,
 	productSyncTask
 } = {
-	productAsyncTask: makeBenchSuiteTask('product', 'async', PRODUCT_ASYNC_SUITE, ['fast-glob', 'node-glob', 'fdir']),
-	productStreamTask: makeBenchSuiteTask('product', 'stream', PRODUCT_STREAM_SUITE, ['fast-glob', 'node-glob']),
-	productSyncTask: makeBenchSuiteTask('product', 'sync', PRODUCT_SYNC_SUITE, ['fast-glob', 'node-glob', 'fdir'])
+	productAsyncTask: makeBenchSuiteTask('product', 'async', PRODUCT_ASYNC_SUITE, ['safe-glob', 'node-glob', 'fdir']),
+	productStreamTask: makeBenchSuiteTask('product', 'stream', PRODUCT_STREAM_SUITE, ['safe-glob', 'node-glob']),
+	productSyncTask: makeBenchSuiteTask('product', 'sync', PRODUCT_SYNC_SUITE, ['safe-glob', 'node-glob', 'fdir'])
 };
 
 export const {

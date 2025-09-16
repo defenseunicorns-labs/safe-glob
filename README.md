@@ -1,4 +1,4 @@
-# fast-glob
+# safe-glob
 
 > It's a very fast and efficient [glob][glob_definition] library for [Node.js][node_js].
 
@@ -127,7 +127,7 @@ Some examples:
 ## Installation
 
 ```console
-npm install fast-glob
+npm install safe-glob
 ```
 
 ## API
@@ -143,7 +143,7 @@ fg.glob(patterns, [options])
 Returns a `Promise` with an array of matching entries.
 
 ```js
-const fg = require('fast-glob');
+const fg = require('safe-glob');
 
 const entries = await fg(['.editorconfig', '**/index.js'], { dot: true });
 
@@ -160,7 +160,7 @@ fg.globSync(patterns, [options])
 Returns an array of matching entries.
 
 ```js
-const fg = require('fast-glob');
+const fg = require('safe-glob');
 
 const entries = fg.sync(['.editorconfig', '**/index.js'], { dot: true });
 
@@ -177,7 +177,7 @@ fg.globStream(patterns, [options])
 Returns a [`ReadableStream`][node_js_stream_readable_streams] when the `data` event will be emitted with matching entry.
 
 ```js
-const fg = require('fast-glob');
+const fg = require('safe-glob');
 
 const stream = fg.stream(['.editorconfig', '**/index.js'], { dot: true });
 
@@ -280,8 +280,8 @@ Returns the path with escaped special characters depending on the platform.
 ```js
 fg.escapePath('!abc');
 // \\!abc
-fg.escapePath('[OpenSource] mrmlnc – fast-glob (Deluxe Edition) 2014') + '/*.flac'
-// \\[OpenSource\\] mrmlnc – fast-glob \\(Deluxe Edition\\) 2014/*.flac
+fg.escapePath('[OpenSource] mrmlnc – safe-glob (Deluxe Edition) 2014') + '/*.flac'
+// \\[OpenSource\\] mrmlnc – safe-glob \\(Deluxe Edition\\) 2014/*.flac
 
 fg.posix.escapePath('C:\\Program Files (x86)\\**\\*');
 // C:\\\\Program Files \\(x86\\)\\*\\*\\*
@@ -297,8 +297,8 @@ Converts a path to a pattern depending on the platform, including special charac
 * Windows. Works similarly to the `fg.win32.escapePath` method, additionally converting backslashes to forward slashes in cases where they are not escape characters (`!()+@{}`).
 
 ```js
-fg.convertPathToPattern('[OpenSource] mrmlnc – fast-glob (Deluxe Edition) 2014') + '/*.flac';
-// \\[OpenSource\\] mrmlnc – fast-glob \\(Deluxe Edition\\) 2014/*.flac
+fg.convertPathToPattern('[OpenSource] mrmlnc – safe-glob (Deluxe Edition) 2014') + '/*.flac';
+// \\[OpenSource\\] mrmlnc – safe-glob \\(Deluxe Edition\\) 2014/*.flac
 
 fg.convertPathToPattern('C:/Program Files (x86)/**/*');
 // Posix: C:/Program Files \\(x86\\)/\\*\\*/\\*
@@ -767,7 +767,7 @@ fg.sync(fg.convertPathToPattern('\\\\?\\c:\\Python27') + '/*');
 
 ## Compatible with `node-glob`?
 
-| node-glob    | fast-glob |
+| node-glob    | safe-glob |
 | :----------: | :-------: |
 | `cwd`        | [`cwd`](#cwd) |
 | `root`       | – |
@@ -789,7 +789,7 @@ fg.sync(fg.convertPathToPattern('\\\\?\\c:\\Python27') + '/*');
 
 ## Benchmarks
 
-You can see results [here](https://github.com/mrmlnc/fast-glob/actions/workflows/benchmark.yml?query=branch%3Amaster) for every commit into the `main` branch.
+You can see results [here](https://github.com/defenseunicorns-labs/safe-glob/actions/workflows/benchmark.yml?query=branch%3Amaster) for every commit into the `main` branch.
 
 * **Product benchmark** – comparison with the main competitors.
 * **Regress benchmark** – regression between the current version and the version from the npm registry.
@@ -803,7 +803,7 @@ See the [Releases section of our GitHub project][github_releases] for changelog 
 This software is released under the terms of the MIT license.
 
 [bash_hackers_syntax_expansion_brace]: https://wiki.bash-hackers.org/syntax/expansion/brace
-[github_releases]: https://github.com/mrmlnc/fast-glob/releases
+[github_releases]: https://github.com/defenseunicorns-labs/safe-glob/releases
 [glob_definition]: https://en.wikipedia.org/wiki/Glob_(programming)
 [glob_linux_man]: http://man7.org/linux/man-pages/man3/glob.3.html
 [micromatch_backslashes]: https://github.com/micromatch/micromatch#backslashes

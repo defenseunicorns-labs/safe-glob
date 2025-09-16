@@ -1,12 +1,12 @@
 {
-  "name": "fast-glob",
+  "name": "safe-glob",
   "version": "3.3.1",
-  "description": "It's a very fast and efficient glob library for Node.js",
+  "description": "It's a very fast and efficient glob library for Node.js - forked by Defense Unicorns",
   "license": "MIT",
-  "repository": "mrmlnc/fast-glob",
+  "repository": "defenseunicorns-labs/safe-glob",
   "author": {
-    "name": "Denis Malinochkin",
-    "url": "https://mrmlnc.com"
+    "name": "Denis Malinochkin (forked by Defense Unicorns)",
+    "url": "https://github.com/defenseunicorns-labs/safe-glob"
   },
   "engines": {
     "node": ">=8.6.0"
@@ -38,7 +38,7 @@
     "eslint": "^6.5.1",
     "eslint-config-mrmlnc": "^1.1.0",
     "execa": "^7.1.1",
-    "fast-glob": "^3.0.4",
+    "safe-glob": "^3.0.4",
     "fdir": "^6.0.1",
     "glob": "^10.0.0",
     "hereby": "^1.8.1",

@@ -17,8 +17,8 @@ export function importCurrentFastGlob(): Promise<typeof import('..')> {
 	return import('..');
 }
 
-export function importPreviousFastGlob(): Promise<typeof import('fast-glob')> {
-	return import('fast-glob');
+export function importPreviousFastGlob(): Promise<typeof import('safe-glob')> {
+	return import('safe-glob');
 }
 
 export function importNodeGlob(): Promise<typeof import('glob')> {

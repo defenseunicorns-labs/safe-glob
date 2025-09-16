@@ -3,7 +3,7 @@ import * as bencho from 'bencho';
 
 import * as utils from '../../utils';
 
-type GlobImplementation = 'node-glob' | 'fast-glob';
+type GlobImplementation = 'node-glob' | 'safe-glob';
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type GlobImplFunction = (...args: any[]) => Promise<unknown[]>;
 
@@ -80,7 +80,7 @@ class Glob {
 			await glob.measureNodeGlob();
 			break;
 
-		case 'fast-glob':
+		case 'safe-glob':
 			await glob.measureFastGlob();
 			break;
 
